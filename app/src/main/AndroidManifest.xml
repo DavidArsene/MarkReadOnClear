@@ -4,6 +4,16 @@
 
 	<application
 		android:label="@string/app_name"
-		android:supportsRtl="true" />
+		android:supportsRtl="true">
+		<service
+			android:name=".NotificationListener"
+			android:exported="true"
+			android:label="NotificationListenerService"
+			android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+			<intent-filter>
+				<action android:name="android.service.notification.NotificationListenerService" />
+			</intent-filter>
+		</service>
+	</application>
 
 </manifest>
