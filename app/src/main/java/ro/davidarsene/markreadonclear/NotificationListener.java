@@ -11,7 +11,7 @@ public class NotificationListener extends NotificationListenerService {
 
     @Override
     public void onNotificationRemoved(StatusBarNotification sbn, RankingMap rankingMap, int reason) {
-        if(reason != REASON_CANCEL && reason != REASON_CANCEL_ALL) return;
+        if(reason != REASON_CANCEL /* && reason != REASON_CANCEL_ALL */) return;
         if(sbn.getNotification().actions == null) return;
 
         Arrays.stream(sbn.getNotification().actions)
