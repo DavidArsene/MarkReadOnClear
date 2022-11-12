@@ -1,0 +1,29 @@
+plugins {
+	id 'com.android.application'
+}
+
+android {
+	namespace 'ro.davidarsene.markreadonclear'
+	compileSdk 33
+
+	defaultConfig {
+		applicationId "ro.davidarsene.markreadonclear"
+		minSdk 31
+		targetSdk 33
+		versionCode 10000
+		versionName "1.0"
+	}
+
+	buildTypes {
+		release {
+			minifyEnabled true
+			proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+		}
+	}
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_1_8
+		targetCompatibility JavaVersion.VERSION_1_8
+	}
+}
+
+dependencies {}
